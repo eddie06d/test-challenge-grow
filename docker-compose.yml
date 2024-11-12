@@ -1,13 +1,11 @@
-version: '1.0.0'
+version: "1.0.0"
 
 services:
   mysql:
     image: mysql:8.0
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: ''
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
       MYSQL_DATABASE: grow_analytics
     ports:
       - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql

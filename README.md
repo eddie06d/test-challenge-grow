@@ -66,6 +66,30 @@ Levantar el servidor de desarrollo:
 npm run dev
 ```
 
+Para poder interactuar con las vistas hay que crearse uno o varios usuarios desde swagger, ya que aun no esta implementado esa funcion desde el frontend:
+
+1. Una vez levantado el servidor de backend, ir a la siguiente ruta en el navegador:
+
+```bash
+http://localhost:5001/swagger
+```
+
+2. Crear usuarios con la ruta POST del schema users, con la siguiente estructura:
+
+```
+{
+    "usuario": "jhon06",
+    "correo": "jhon_06@google.com",
+    "nombre": "Jhon",
+    "apell_paterno": "Doe",
+    "apell_materno": "Smith",
+    "contrasena": "123456",
+    "tipo_usuario": "user"
+}
+```
+
+Con los usuarios creados se puede hacer login e interactuar con las demas funcionalidades del sistema.
+
 Correr los test unitarios:
 
 ```bash
